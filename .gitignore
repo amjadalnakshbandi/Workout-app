@@ -149,5 +149,6 @@ testem.log
 .DS_Store
 Thumbs.db
 
-SportAppFrontend\.angular
-SportAppFrontend\node_modules
+./SportAppFrontend/node_modules
+./SportAppFrontend/.angular
+
