@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class FetchController {
     @Autowired
     private JsonFileReaderService jsonFileReaderService;
-        private final String filePath = "C:\\Users\\ALNAKA\\OneDrive - NTT DATA EMEAL\\Dokumente\\Angular Schulung\\SportApp\\SportAppBackend\\src\\main\\resources\\static\\data\\data.json";
+        private final String filePath = "SportAppBackend\\src\\main\\resources\\static\\data\\data.json";
 
     @GetMapping("/")
     public Object index() {
