@@ -148,3 +148,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+SportAppFrontend\.angular
+SportAppFrontend\node_modules
