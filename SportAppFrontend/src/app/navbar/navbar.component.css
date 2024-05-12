@@ -1,0 +1,48 @@
+mat-toolbar {
+  font-family: 'Arial', sans-serif;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  height: 60px; /* Adjust height as necessary */
+}
+
+mat-toolbar span:first-child {
+  font-size: 1.2em;
+  font-weight: bold;
+  flex-grow: 1; /* Ensures the title takes up any leftover space, pushing buttons to the edge */
+}
+
+button.mat-button {
+  margin-left: 15px; /* Increases left margin for better separation */
+  border-radius: 20px;
+  padding: 10px 20px; /* More generous padding for a better tactile feel */
+  font-size: 0.9em;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover and click effects */
+}
+
+button.mat-button:first-child {
+  margin-left: 0; /* No extra margin for the first button */
+}
+
+button.mat-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px); /* Slight raise effect on hover */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+button.mat-button:active {
+  transform: translateY(1px); /* Push down slightly on click */
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2); /* Deeper shadow for click effect */
+}
+
+@media (max-width: 768px) {
+  button.mat-button {
+    margin-left: 10px; /* Slightly smaller margin for smaller screens */
+    padding: 8px 15px; /* Slightly smaller padding for space efficiency */
+    font-size: 0.8em;
+  }
+
+  button.mat-button:first-child {
+    margin-left: 0; /* Ensures the first button on small screens also has no extra margin */
+  }
+}

@@ -1,0 +1,17 @@
+.mat-expansion-panel {
+  display: block;
+}
+
+.panel-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.text-content {
+  flex: 1;
+  padding-right: 20px;
+}
+.image-content {
+  flex-basis: 200px;
+}
