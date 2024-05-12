@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
 @CrossOrigin("http://localhost:4200/")
-public class FetchController {
+public class backController {
     @Autowired
     private JsonFileReaderService jsonFileReaderService;
-        private final String filePath = "SportAppBackend\\src\\main\\resources\\static\\data\\data.json";
+        private final String filePath = "SportAppBackend\\src\\main\\resources\\static\\data\\back.json";
 
     @GetMapping("/")
     public Object index() {
