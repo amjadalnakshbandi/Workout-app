@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import {
   MatAccordion,
   MatExpansionPanel,
@@ -14,6 +12,7 @@ interface Item {
   target: string;
   instructions: string [];
   gifUrl: string;
+  secondaryMuscles: string[];
 }
 
 @Component({
@@ -25,7 +24,7 @@ interface Item {
     MatExpansionPanelDescription,
     MatExpansionPanelHeader,
     MatExpansionPanelTitle,
-    NgForOf, BrowserAnimationsModule
+    NgForOf,
   ],
   templateUrl: './back.component.html',
   styleUrl: './back.component.css'
@@ -42,7 +41,7 @@ export class BackComponent implements OnInit {
   }
 
   loadData() {
-    fetch('http://localhost:8080/')
+    fetch('http://localhost:8080/back')
       .then(response => response.json())
       .then((data: Item[]) => {
         this.items = data;

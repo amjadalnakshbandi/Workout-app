@@ -1,22 +1,4 @@
-<mat-accordion>
-  <mat-expansion-panel *ngFor="let item of items" hideToggle>
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        {{ item.name }}
-      </mat-panel-title>
-      <mat-panel-description>
-        {{ item.target}}
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-    <div class="panel-body">
-      <div class="text-content">
-        <ul *ngFor="let steps of item.instructions">
-          <li>{{ steps }}</li>
-        </ul>
-      </div>
-      <div class="image-content">
-        <img [src]="item.gifUrl" alt="Exercise Image">
-      </div>
-    </div>
-  </mat-expansion-panel>
-</mat-accordion>
+<p>
+  <app-navbar></app-navbar>
+</p>
+<router-outlet></router-outlet>

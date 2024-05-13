@@ -1,14 +1,5 @@
-<router-outlet></router-outlet>
-
 <mat-toolbar color="primary">
-  <span>Workout app </span>
+  <span routerLink="/main" style="cursor: pointer;">Workout App</span>
   <span class="example-spacer"></span>
-  <button mat-button routerLink="/main" >Cardio</button>
-  <button mat-button>Chest</button>
-  <button mat-button routerLink="/back" >Back</button>
-  <button mat-button>Lower-Arms</button>
-  <button mat-button>Lower-Legs</button>
-  <button mat-button>Neck</button>
-  <button mat-button>Shoulders</button>
+  <a *ngFor="let item of items" [routerLink]="item.toLowerCase()" class="nav-item">{{ item }}</a>
 </mat-toolbar>
-

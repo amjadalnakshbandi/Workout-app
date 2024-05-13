@@ -1,1 +1,24 @@
-<p>lower-arms works!</p>
+<mat-accordion>
+  @for (item of items; track item){
+      <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ item.name }}
+      </mat-panel-title>
+      <mat-panel-description>
+        <p><b>{{ item.target}}</b> {{item.secondaryMuscles}}</p>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="panel-body">
+      <div class="text-content">
+        @for (steps of item.instructions; track steps ){
+          <ul><li>{{steps}}</li></ul>
+        }
+      </div>
+      <div class="image-content">
+        <img [src]="item.gifUrl" alt="Exercise Image">
+      </div>
+    </div>
+  </mat-expansion-panel>
+  }
+</mat-accordion>

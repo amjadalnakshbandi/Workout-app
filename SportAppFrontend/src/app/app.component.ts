@@ -1,43 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
-import { MatExpansionModule } from '@angular/material/expansion';
+import {Component, OnInit} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {RouterOutlet} from '@angular/router';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {NavbarComponent} from "./navbar/navbar.component";
 
 interface Item {
   name: string;
-  target:string;
+  target: string;
   instructions: string [];
-  gifUrl:string;
+  gifUrl: string;
 }
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule,
-            RouterOutlet,
-            MatExpansionModule],
+    RouterOutlet,
+    MatExpansionModule, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'SportAppFrontend';
-  items: Item[] = [];
-
-  constructor() {}
-
-  ngOnInit() {
-    this.loadData();
-  }
-
- loadData() {
-    fetch('http://localhost:8080/')
-      .then(response => response.json())
-      .then((data: Item[]) => {
-        this.items = data;
-      })
-      .catch(err => {
-        console.error('Failed to load data:', err);
-      });
-  }
-
 }
